@@ -1,0 +1,10 @@
+@mixin tablet{
+    @media (min-width: 768px){
+        @content;
+    }
+}
+@mixin pantalla-grande{
+    @media (min-width: 1200px){
+        @content;
+    }
+}

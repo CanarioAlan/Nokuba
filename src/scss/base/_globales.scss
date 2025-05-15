@@ -1,0 +1,28 @@
+@use 'variables' as v;
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+a{
+    text-decoration: none;
+}
+ul,ol { 
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,a,p{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 3rem;
+}
+.contenido-centrado{
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center; 
+}

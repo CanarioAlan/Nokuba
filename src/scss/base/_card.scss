@@ -1,0 +1,19 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.cards{
+    text-align: center; 
+    img{
+        width: 12rem;
+        @include m.tablet{
+            width: 25rem;
+        }
+    }
+    p{
+        font-size: 1.3rem;
+        font-weight: 700;
+        @include m.tablet{
+            font-size: 1.6rem;
+        }
+    }
+}

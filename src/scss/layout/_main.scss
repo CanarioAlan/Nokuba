@@ -1,0 +1,29 @@
+@use 'base/variables' as v;  
+@use 'base/mixins' as m;
+
+main{
+    .banner{
+        img{
+            width: 100%;
+        }
+    }
+    .accesorios-index{
+        text-align: start;
+        padding: 0 2rem;
+        margin: 1.5rem auto;
+        h2{
+            font-size: 1.7rem;
+            @include m.tablet{
+                font-size: 2.7rem;
+            }
+        }
+        .accesorios-index-contenido{
+            display: flex;
+            gap: 1.5rem;
+            max-width: 90rem;
+            margin-left: 4.5rem;
+        }
+    }
+}
+
+//titulo 18 - 20 px - texto comun  rondando los 15

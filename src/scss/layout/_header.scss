@@ -1,0 +1,59 @@
+@use 'base/variables' as v;  
+@use 'base/mixins' as m;
+
+header{
+   background-color: v.$color-primario;
+
+}
+.header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 0.5rem;
+   max-width: 120rem;
+   margin: 0 auto;
+   button{
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+   }
+   .btn-carrito{
+      order: 2;
+   }
+   a{
+      order: 1;
+      .logo{
+         width: 150px;
+      }
+   }
+   .header-links-buscador{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-direction: row-reverse;
+      button{
+         background-color: transparent;
+         cursor: pointer;
+         border: none;
+         img{
+            width: 2.6rem;
+         }
+      }
+   }
+   .btn-menu{
+      background-color: transparent;
+      cursor: pointer;
+      border:solid 1px v.$color-secundario;
+      color:v.$color-secundario;
+      border-radius: 0.4rem;
+      img{
+         width: 2.6rem;
+      }
+   }
+   .x{
+      display: none;
+   }  
+   .links{
+      display: none;
+   }
+}

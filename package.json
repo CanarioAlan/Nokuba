@@ -1,0 +1,26 @@
+{
+  "name": "nokuba.web",
+  "version": "1.0.0",
+  "description": "Ecommerce para mascotas de un cliente de fiver",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:dist/css",
+"dev": "gulp dev"
+  },
+  "keywords": [
+    "Sass",
+    "Gulp",
+    "HTML",
+    "PHP",
+    "Mysql",
+    "JavaScript."
+  ],
+  "author": "Canario Alan.",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.88.0"
+  }
+}
