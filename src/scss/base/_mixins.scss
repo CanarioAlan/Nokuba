@@ -1,3 +1,9 @@
+@use "sass:color";
+@mixin celular{
+    @media (min-width: 480px){
+        @content;
+    }
+}
 @mixin tablet{
     @media (min-width: 768px){
         @content;
@@ -7,4 +13,45 @@
     @media (min-width: 1200px){
         @content;
     }
+}
+@mixin btn-general(
+  $background-color: #BBBEA0,
+  $text-color: #fff,
+  $padding-y: .5rem,
+  $padding-x: 2rem,
+  $font-size: 1rem,
+  $border-radius: 5px,
+  $border: none,
+  $cursor: pointer,
+  $font-weight: bold,
+  $transition: background-color 0.3s ease
+) {
+  background-color: $background-color;
+  color: $text-color;
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-radius;
+  border: $border;
+  cursor: $cursor;
+  font-weight: $font-weight;
+  transition: $transition;
+
+  &:hover {
+    background-color: color.adjust($background-color, $lightness: -10%);
+  }
+
+}
+//mixin de caja contenedora de color
+@mixin color-contenedor($bg-color, $text-color: #fff) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 1rem;
+  border-radius: .5rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    background-color: color.adjust($bg-color, $lightness: -10%);
+  }
+
 }

@@ -1,0 +1,73 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.sobre{
+    padding: 1rem;
+    h1{
+        font-size: 2.6rem;
+        font-weight: 900;
+    }
+    .sobre-contenido{
+        .sobre-texto{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            @include m.tablet{
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                .sobre-titulos{
+                  width: 370px;
+                  h2{
+                    font-size: 2.7rem;
+                  }
+                }
+            }
+            h2{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            p{
+                text-align: start;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+            .sobre-imagen{
+                width: 20rem;
+                height: 20rem;
+                margin: 0 auto;
+                background-color: v.$color-secundario;
+                clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+                background-image: url("../../../src/img/nokuba-img.jpg");
+                background-size: cover;
+                background-position: center;
+                @include m.tablet{
+                    width: 25rem;
+                    height: 25rem;
+                    margin: 0;
+                }
+            }
+        }
+        .sobre-texto-info{
+            h3{
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+            p{
+                text-align: start;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+            @include m.tablet{
+                h3{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        
+    }
+}
+

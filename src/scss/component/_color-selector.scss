@@ -1,0 +1,29 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.carousel-color{
+    display: flex;
+    gap: .5rem;
+    .color-contenedor{
+        width: 5rem;
+        height: 5rem;
+        .color-contenedor-texto{
+            font-size: 1.2rem;
+        }
+        &.negro{
+            @include m.color-contenedor(v.$color-negro,v.$color-blanco);
+        }
+        &.rosa{
+            @include m.color-contenedor(v.$color-rosado,v.$color-blanco);
+        }
+        &.naranja{
+            @include m.color-contenedor(v.$color-naranja,v.$color-blanco);
+        }
+        &.verde{
+            @include m.color-contenedor(v.$color-verde,v.$color-blanco);
+        }
+        &.amarillo{
+            @include m.color-contenedor(v.$color-amarillo,v.$color-blanco);
+        }
+    }
+}

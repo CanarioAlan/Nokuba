@@ -1,0 +1,30 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.svg-fondo{
+  display: flex;
+  gap: .5rem;
+  padding: 2rem;
+  .contenedor-svg{
+    width: 50%;
+    border-radius: 50%;
+    svg{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+    .texto-insertar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: .5rem;
+        .salida{
+            padding: 1rem;
+            display: inline-block;
+            font-size: 2.2rem;
+        }
+    }
+  }
+}

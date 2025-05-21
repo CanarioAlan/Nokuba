@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -341,6 +342,16 @@ h3 {
   text-align: center;
 }
 
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .cards {
   text-align: center;
 }
@@ -385,6 +396,11 @@ header {
 .header a {
   order: 1;
 }
+@media (min-width: 768px) {
+  .header a {
+    order: 0;
+  }
+}
 .header a .logo {
   width: 150px;
 }
@@ -394,13 +410,91 @@ header {
   gap: 1rem;
   flex-direction: row-reverse;
 }
-.header .header-links-buscador button {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
+@media (min-width: 768px) {
+  .header .header-links-buscador {
+    flex-direction: column-reverse;
+  }
 }
-.header .header-links-buscador button img {
-  width: 2.6rem;
+.header .header-links-buscador .buscador-input-contenedor {
+  display: block;
+}
+.header .header-links-buscador .buscador-input-contenedor .buscador-input {
+  border: solid 1px #BBBEA0;
+  background-image: url("../../src/img/iconos/lupa.svg");
+  background-repeat: no-repeat;
+  width: 3.8rem;
+  height: 3.4rem;
+  background-position: center center;
+}
+.header .header-links-buscador .buscador-input-contenedor .buscador-input::placeholder {
+  color: transparent;
+}
+@media (min-width: 768px) {
+  .header .header-links-buscador .btn-menu {
+    display: none;
+  }
+}
+.header .header-links-buscador nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #F1EAEA;
+}
+@media (min-width: 768px) {
+  .header .header-links-buscador nav {
+    position: relative;
+  }
+}
+.header .header-links-buscador nav ul {
+  padding: 0;
+}
+.header .header-links-buscador nav .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90%;
+  gap: 1rem;
+  padding: 1rem;
+}
+.header .header-links-buscador nav .links .link {
+  color: #808080;
+  font-size: 4rem;
+}
+.header .header-links-buscador nav .links .link:hover {
+  border-bottom: solid 1px #BBBEA0;
+}
+@media (min-width: 768px) {
+  .header .header-links-buscador nav .links {
+    flex-direction: row;
+    gap: 2rem;
+    text-align: start;
+    padding: 0;
+  }
+  .header .header-links-buscador nav .links .link {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .header .header-links-buscador .buscador-input-contenedor .buscador-input {
+    width: 45rem;
+    padding: 0.6rem 2rem;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    background-position: right 1rem center;
+  }
+  .header .header-links-buscador .buscador-input-contenedor .buscador-input::placeholder {
+    color: #BBBEA0;
+  }
+  .header .header-links-buscador .buscador-input-contenedor .buscador-input:focus {
+    border: solid 1px #BBBEA0;
+    background-image: none;
+  }
 }
 .header .btn-menu {
   background-color: transparent;
@@ -411,12 +505,6 @@ header {
 }
 .header .btn-menu img {
   width: 2.6rem;
-}
-.header .x {
-  display: none;
-}
-.header .links {
-  display: none;
 }
 
 footer h3 {
@@ -546,6 +634,13 @@ footer .logo-footer .contenedor-logo .iconos-logo img {
     height: 100%;
   }
 }
+footer .menu-footer a,
+footer .menu-footer button {
+  color: #808080;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 @media (min-width: 768px) {
   footer .menu-footer {
     display: grid;
@@ -570,12 +665,14 @@ footer .menu-footer .menu-navegacion .links {
   gap: 2rem;
   padding: 0;
 }
-footer .menu-footer .menu-navegacion .links a {
+footer .menu-footer .menu-navegacion .links a,
+footer .menu-footer .menu-navegacion .links button {
   font-size: 2.5rem;
   padding: 0.5rem;
 }
 @media (min-width: 768px) {
-  footer .menu-footer .menu-navegacion .links a {
+  footer .menu-footer .menu-navegacion .links a,
+  footer .menu-footer .menu-navegacion .links button {
     font-size: 1.5rem;
     border: none;
   }
@@ -680,4 +777,451 @@ main .accesorios-index .accesorios-index-contenido {
   gap: 1.5rem;
   max-width: 90rem;
   margin-left: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  .producto {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.producto .img-producto .svg-fondo {
+  border-radius: 50%;
+}
+.producto .img-producto img {
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .producto .img-producto img {
+    max-width: 35rem;
+  }
+}
+@media (min-width: 768px) {
+  .producto .img-producto img {
+    max-width: 65rem;
+  }
+}
+.producto .informacion-general {
+  padding: 0 1rem;
+  text-align: start;
+}
+.producto .informacion-general h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.producto .informacion-general .precio {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #757767;
+}
+.producto .informacion-general p {
+  font-size: 1.7rem;
+  font-weight: 200;
+}
+.producto .informacion-general .form-etiqueta-perro h3 {
+  font-size: 2rem;
+}
+.producto .informacion-general .form-etiqueta-perro .informacion-llavero {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.producto .informacion-general .form-etiqueta-perro .informacion-llavero h4 {
+  font-size: 1.7rem;
+}
+.producto .informacion-general .form-etiqueta-perro .informacion-llavero input {
+  padding: 0.5rem;
+  border: solid 1px #BBBEA0;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  width: 25rem;
+}
+.producto .informacion-general .form-etiqueta-perro .form-border {
+  border-left: solid 1rem #BBBEA0;
+  padding-left: 1rem;
+}
+.producto .informacion-general .form-etiqueta-perro .tamaño-llavero {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.producto .informacion-general .form-etiqueta-perro .tamaño-llavero h3 {
+  font-size: 2rem;
+}
+.producto .informacion-general .form-etiqueta-perro .tamaño-llavero button {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: solid 1px #BBBEA0;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  width: 25rem;
+  cursor: pointer;
+}
+.producto .informacion-general .form-etiqueta-perro .boton-envio {
+  padding: 1.5rem 0;
+  background-color: #BBBEA0;
+  border-radius: 0.4rem;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+.producto .informacion-general .descripcion-etiqueta-perro {
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  .producto .accesorios-recomendados {
+    grid-column: 1/3;
+  }
+}
+.producto .accesorios-recomendados h2 {
+  text-align: start;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.sobre {
+  padding: 1rem;
+}
+.sobre h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
+}
+.sobre .sobre-contenido .sobre-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .sobre .sobre-contenido .sobre-texto {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .sobre .sobre-contenido .sobre-texto .sobre-titulos {
+    width: 370px;
+  }
+  .sobre .sobre-contenido .sobre-texto .sobre-titulos h2 {
+    font-size: 2.7rem;
+  }
+}
+.sobre .sobre-contenido .sobre-texto h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.sobre .sobre-contenido .sobre-texto p {
+  text-align: start;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.sobre .sobre-contenido .sobre-texto .sobre-imagen {
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+  background-color: #BBBEA0;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  background-image: url("../../../src/img/nokuba-img.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .sobre .sobre-contenido .sobre-texto .sobre-imagen {
+    width: 25rem;
+    height: 25rem;
+    margin: 0;
+  }
+}
+.sobre .sobre-contenido .sobre-texto-info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.sobre .sobre-contenido .sobre-texto-info p {
+  text-align: start;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .sobre .sobre-contenido .sobre-texto-info h3 {
+    font-size: 2rem;
+  }
+  .sobre .sobre-contenido .sobre-texto-info p {
+    font-size: 1.8rem;
+  }
+}
+
+.contenedor-contacto {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.contenedor-contacto .contacto-contenido-siber {
+  width: 100%;
+  max-width: 35rem;
+  height: 45rem;
+  background-color: #BBBEA0;
+  background-image: url("../../src/img/perro.png");
+  background-size: 27rem;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  backdrop-filter: blur(5rem);
+}
+@media (min-width: 768px) {
+  .contenedor-contacto .contacto-contenido-siber {
+    width: 40%;
+    border-radius: 0.8rem 0 0 0.8rem;
+  }
+}
+.contenedor-contacto .contacto-texto h2 {
+  font-size: 2.2rem;
+  color: #fff;
+}
+.contenedor-contacto .contacto-texto p {
+  font-size: 1.8rem;
+  text-align: start;
+  color: #fff;
+}
+.contenedor-contacto .contacto-texto {
+  backdrop-filter: blur(0.5rem);
+  padding: 1rem;
+}
+.contenedor-contacto .contacto-formulario {
+  background-color: #BBBEA0;
+  padding: 1rem;
+  width: 100%;
+  max-width: 35rem;
+  height: 45rem;
+}
+@media (min-width: 768px) {
+  .contenedor-contacto .contacto-formulario {
+    border-radius: 0 0.8rem 0.8rem 0;
+  }
+}
+.contenedor-contacto .contacto-formulario h3 {
+  font-size: 2.2rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+.contenedor-contacto .contacto-formulario form {
+  padding: 0.5rem;
+  background-color: #fff;
+  display: grid;
+  gap: 0.5rem;
+}
+.contenedor-contacto .contacto-formulario form .form-grupo {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.contenedor-contacto .contacto-formulario form .form-grupo input {
+  padding: 0.5rem;
+  border: solid 1px #BBBEA0;
+  font-size: 1.7rem;
+}
+.contenedor-contacto .contacto-formulario form .form-grupo input:focus {
+  outline: none;
+  border-color: #BBBEA0;
+}
+.contenedor-contacto .contacto-formulario form .form-grupo textarea {
+  padding: 0.3rem;
+  border: solid 1px #BBBEA0;
+  font-size: 1.7rem;
+}
+.contenedor-contacto .contacto-formulario form .form-grupo textarea:focus {
+  outline: none;
+}
+.contenedor-contacto .contacto-formulario form .form-grupo label {
+  font-size: 1.7rem;
+  color: #757767;
+}
+
+.btn-enviar {
+  background-color: #BBBEA0;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 2.7rem;
+}
+.btn-enviar:hover {
+  background-color: rgb(165.325, 169.28125, 129.71875);
+}
+
+.envios {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 0.8rem;
+}
+.envios .cerrar-envios {
+  position: relative;
+}
+.envios .cerrar-envios .cerrar-btn {
+  position: absolute;
+  right: 1rem;
+  border: none;
+  background-color: #BBBEA0;
+  cursor: pointer;
+}
+.envios .cerrar-envios .cerrar-btn img {
+  width: 4rem;
+  filter: invert(100%);
+}
+@media (min-width: 768px) {
+  .envios .cerrar-envios .cerrar-btn img {
+    width: 2.5rem;
+  }
+}
+.envios h2 {
+  margin-top: 2.5rem;
+  font-size: 2.6rem;
+}
+.envios p {
+  font-size: 2rem;
+  text-align: start;
+}
+.envios h3 {
+  font-size: 2.5rem;
+}
+.envios table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.envios table th {
+  font-size: 2.2rem;
+  border: solid 1px #BBBEA0;
+}
+.envios table td {
+  font-size: 2rem;
+  border: solid 1px #BBBEA0;
+}
+.envios table tfoot {
+  background-color: #BBBEA0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+}
+@media (min-width: 768px) {
+  .envios {
+    top: 5rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    height: 60rem;
+  }
+}
+
+.carousel-color {
+  display: flex;
+  gap: 0.5rem;
+}
+.carousel-color .color-contenedor {
+  width: 5rem;
+  height: 5rem;
+}
+.carousel-color .color-contenedor .color-contenedor-texto {
+  font-size: 1.2rem;
+}
+.carousel-color .color-contenedor.negro {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.carousel-color .color-contenedor.negro:hover {
+  background-color: hsl(0, 0%, -10%);
+}
+.carousel-color .color-contenedor.rosa {
+  background-color: #FFB6C1;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.carousel-color .color-contenedor.rosa:hover {
+  background-color: rgb(255, 131, 149.6849315068);
+}
+.carousel-color .color-contenedor.naranja {
+  background-color: #FF6A00;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.carousel-color .color-contenedor.naranja:hover {
+  background-color: rgb(204, 84.8, 0);
+}
+.carousel-color .color-contenedor.verde {
+  background-color: #008000;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.carousel-color .color-contenedor.verde:hover {
+  background-color: #004d00;
+}
+.carousel-color .color-contenedor.amarillo {
+  background-color: #FFD700;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.carousel-color .color-contenedor.amarillo:hover {
+  background-color: #ccac00;
+}
+
+.svg-fondo {
+  display: flex;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+.svg-fondo .contenedor-svg {
+  width: 50%;
+  border-radius: 50%;
+}
+.svg-fondo .contenedor-svg svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.svg-fondo .contenedor-svg .texto-insertar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.5rem;
+}
+.svg-fondo .contenedor-svg .texto-insertar .salida {
+  padding: 1rem;
+  display: inline-block;
+  font-size: 2.2rem;
 }

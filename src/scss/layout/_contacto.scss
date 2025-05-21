@@ -1,0 +1,96 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contenedor-contacto{
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .contacto-contenido-siber{
+      width: 100%; 
+      max-width: 35rem;
+      height: 45rem;
+      background-color: v.$color-secundario;
+      background-image: url('../../src/img/perro.png');
+      background-size: 27rem;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      backdrop-filter: blur(5rem);
+      @include m.tablet{
+        width: 40%;
+        border-radius: .8rem 0 0 .8rem;
+      }
+    }
+    .contacto-texto{
+        h2{
+            font-size: 2.2rem;
+            color: v.$color-blanco;
+        }
+        p{
+            font-size: 1.8rem;
+            text-align: start;
+            color: v.$color-blanco;
+        }
+    }
+    .contacto-texto{
+        backdrop-filter: blur(.5rem);
+        padding: 1rem
+    }
+    .contacto-formulario{
+        background-color: v.$color-secundario;
+        padding: 1rem;
+        width: 100%; 
+        max-width: 35rem;
+        height: 45rem;
+        @include m.tablet{
+            border-radius: 0 .8rem .8rem 0;
+        }
+        h3{
+            font-size: 2.2rem;
+            color: v.$color-blanco;
+            padding: 1rem 0;
+        }
+        form{
+            padding: .5rem;
+            background-color: v.$color-blanco;
+            display: grid;
+            gap: .5rem;
+            .form-grupo{
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                gap: .5rem;
+               justify-content: center;
+               input{
+                padding: .5rem;
+                border:solid 1px v.$color-secundario;
+                font-size: 1.7rem;
+                &:focus{
+                    outline: none;
+                    border-color: v.$color-secundario;
+                }
+               }
+               textarea{
+                padding: .3rem;
+                border:solid 1px v.$color-secundario;
+                font-size: 1.7rem;
+                &:focus{
+                    outline: none;
+                }
+               }
+               label{
+                font-size: 1.7rem;
+                color: v.$color-terciario;
+               }
+            }
+        }
+
+    }
+
+}
+.btn-enviar {
+    @include m.btn-general();
+    font-size: 2.7rem;
+}

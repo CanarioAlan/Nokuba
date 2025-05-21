@@ -26,3 +26,11 @@ h3{
     margin: 0 auto;
     text-align: center; 
 }
+.visible{
+    opacity: 1;
+    visibility: visible;
+}
+.invisible{
+    opacity: 0;
+    visibility: hidden;
+}

@@ -11,18 +11,19 @@
 <body>
     <header>
         <div class="contenido-centrado header">
-
-            <a href="#"><img class="logo" src="src/img/logo.svg" alt="Logo"></a>
-
+            <a href="index.php"><img class="logo" src="src/img/logo.svg" alt="Logo"></a>
             <div class="header-links-buscador">
-                <button><img src="src/img/iconos/lupa.svg" alt="Buscar"></button>
+                <div class="buscador-input-contenedor">
+                    <input type="text" class="buscador-input" placeholder="¿Qué estás buscando?">
+                    <div class="resultado-contenido"></div>
+                </div>
+                <button class="btn-menu abrir" id="abrir-menu"><img src="src/img/iconos/menu.svg" alt="Menu para desplegar"></button>
                 <nav class="nav">
-                    <button class="btn-menu"><img src="src/img/iconos/menu.svg" alt="Menu para desplegar"></button>
-                    <button class="btn-menu x"><img src="src/img/iconos/x.svg" alt="Menu para cerrar"></button>
+                    <button class="btn-menu x" id="cerrar-menu-btn"><img src="src/img/iconos/x.svg" alt="Menu para cerrar"></button>
                     <?php include 'includes/navegacion.php'; ?>
                 </nav>
             </div>
             <button class="btn-carrito"><img src="src/img/iconos/carrito.svg" alt="Carrito"></button>
-
         </div>
     </header>
+    <?php include 'envios.php'; ?>
