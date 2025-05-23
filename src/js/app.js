@@ -1,45 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    //envios popup
-    const enviosBtn = document.getElementById('envios-btn');
-    const cerrarBtn = document.getElementById('cerrar-btn');
-    const envios = document.querySelector('.envios');
-    enviosBtn.addEventListener('click', () => {
-        envios.classList.remove('invisible');
+document.addEventListener("DOMContentLoaded", () => {
+  // selectores de los colores
+  const colorButtons = document.querySelectorAll(".color-btn");
+  const previews = document.querySelectorAll(".cambio-bg");
+  // selectores de los svg
+  const svgThumbs = document.querySelectorAll(".svg-img");
+  const svgMain = document.getElementById("svg-main");
+  // selectores de los inputs
+  //Seleccion de inputs
+  const informacionLlavero = document.querySelector(".informacion-llavero");
+  const inputs = informacionLlavero.querySelectorAll("input");
+  const textoInsertar = document.querySelectorAll(".texto-insertar p");
+  //Seleccion de color
+  colorButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const color = button.dataset.color;
+      previews.forEach((preview) => {
+        preview.style.background = color;
+      });
     });
-    cerrarBtn.addEventListener('click', () => {
-        envios.classList.add('invisible');
+  });
+  //Seleccion de svg
+  svgThumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      svgMain.src = thumb.dataset.src;
     });
-    //menu pliegable
-    const abrirMenuBtn = document.getElementById('abrir-menu');
-    const cerrarMenuBtn = document.getElementById('cerrar-menu-btn');
-    const menu = document.querySelector('.nav');
-    abrirMenuBtn.addEventListener('click', () => {
-        menu.classList.remove('invisible');
+  });
+  //Inserta el texto
+  inputs.forEach((input, i) => {
+    input.addEventListener("input", (e) => {
+      textoInsertar[i].innerText = e.target.value;
     });
-    cerrarMenuBtn.addEventListener('click', () => {
-        menu.classList.add('invisible');
-    });
-    //cambiar de color de fondo del svg
-    const colores = document.querySelectorAll('.color-contenedor');
-    colores.forEach(color => {
-        color.addEventListener('click', (e) => {
-            const colorSeleccionado = e.target.getAttribute('data-color');
-            const svg = document.querySelectorAll('.contenedor-svg');
-            svg.forEach((svg) => {
-                svg.style.backgroundColor = colorSeleccionado;
-            });
-        });
-    });
-    //insertando el nombre
-    const informacionLlavero = document.querySelector('.informacion-llavero');
-    const inputs = informacionLlavero.querySelectorAll('input');
-    const textoInsertar = document.querySelectorAll('.texto-insertar p');
-    inputs.forEach((input, i) => {
-        input.addEventListener('input', (e) => {
-            textoInsertar[i].innerText = e.target.value;
-        });
-    });
-
-
-
+  });
 });

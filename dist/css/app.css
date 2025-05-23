@@ -831,21 +831,43 @@ main .accesorios-index .accesorios-index-contenido {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.producto .img-producto .svg-fondo {
-  border-radius: 50%;
-}
-.producto .img-producto img {
-  width: 100%;
-}
-@media (min-width: 480px) {
-  .producto .img-producto img {
-    max-width: 35rem;
-  }
+.producto .img-producto .img-fondo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
 }
 @media (min-width: 768px) {
-  .producto .img-producto img {
-    max-width: 65rem;
+  .producto .img-producto .img-fondo {
+    flex-direction: row;
   }
+}
+.producto .img-producto .img-fondo .cambio-bg {
+  width: 250px;
+  height: 250px;
+  border: 2px solid #ccc;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+.producto .img-producto .img-fondo .cambio-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.producto .img-producto .img-fondo .texto-insertar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.5rem;
+}
+.producto .img-producto .img-fondo .texto-insertar .salida {
+  padding: 1rem;
+  display: inline-block;
+  font-size: 2.2rem;
 }
 .producto .informacion-general {
   padding: 0 1rem;
@@ -866,6 +888,29 @@ main .accesorios-index .accesorios-index-contenido {
 }
 .producto .informacion-general .form-etiqueta-perro h3 {
   font-size: 2rem;
+}
+.producto .informacion-general .form-etiqueta-perro .imagenes-galeria {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.producto .informacion-general .form-etiqueta-perro .imagenes-galeria img {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+}
+.producto .informacion-general .form-etiqueta-perro .imagenes-galeria img:hover {
+  border: solid 1px #FF6A00;
+  transform: scale(1.1);
+}
+.producto .informacion-general .form-etiqueta-perro .color-llavero .color-btn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
 }
 .producto .informacion-general .form-etiqueta-perro .informacion-llavero {
   display: flex;
@@ -1201,33 +1246,4 @@ main .accesorios-index .accesorios-index-contenido {
 }
 .carousel-color .color-contenedor.amarillo:hover {
   background-color: #ccac00;
-}
-
-.svg-fondo {
-  display: flex;
-  gap: 0.5rem;
-  padding: 2rem;
-}
-.svg-fondo .contenedor-svg {
-  width: 50%;
-  border-radius: 50%;
-}
-.svg-fondo .contenedor-svg svg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
-}
-.svg-fondo .contenedor-svg .texto-insertar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  gap: 0.5rem;
-}
-.svg-fondo .contenedor-svg .texto-insertar .salida {
-  padding: 1rem;
-  display: inline-block;
-  font-size: 2.2rem;
 }

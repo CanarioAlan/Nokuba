@@ -8,18 +8,41 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .img-producto {
-    .svg-fondo {
-      //   background-color: #000;
-      border-radius: 50%;
+    .img-fondo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      @include m.tablet{
+        flex-direction: row;
+      }
+      .cambio-bg{
+        width: 250px;
+        height: 250px;
+        border: 2px solid #ccc;
+        margin-top: 20px;
+        border-radius: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+      }
+      .texto-insertar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: .5rem;
+        .salida{
+            padding: 1rem;
+            display: inline-block;
+            font-size: 2.2rem;
+        }
     }
-    img {
-      width: 100%;
-      @include m.celular {
-        max-width: 35rem;
-      }
-      @include m.tablet {
-        max-width: 65rem;
-      }
     }
   }
   .informacion-general {
@@ -41,6 +64,31 @@
     .form-etiqueta-perro {
       h3 {
         font-size: 2rem;
+      }
+      .imagenes-galeria{
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        img{
+          cursor: pointer;
+            width: 5rem;
+            height: 5rem;
+        }
+        img:hover{
+          border: solid 1px v.$color-detalles;
+          transform: scale(1.1);
+        }
+      }
+      .color-llavero{
+        .color-btn{
+          border: none;
+          width: 40px;
+          height: 40px;
+          border-radius: 6px;
+          cursor: pointer;
+          margin-right: 5px;
+        }
       }
       .informacion-llavero {
         display: flex;
