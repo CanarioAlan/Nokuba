@@ -51,7 +51,7 @@ footer{
     }
     .suscripcion{
         padding: 1rem 0;
-        background-color: v.$color-gris;
+        background-color: v.$color-base;
         @include m.tablet{
             grid-column: 1 / 5;
         }
@@ -100,7 +100,7 @@ footer{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: v.$color-primario;
+            background-color: v.$color-base;
             padding: .5rem 1rem;
             img{
                 width: 15rem;
@@ -201,14 +201,9 @@ footer{
             }
             img{
                 width: 4rem;
-                background-color: v.$color-gris;
+                background-color: v.$color-base;
                 border-radius: 50%;
                 padding: .5rem;
-            }
-            &:nth-child(5){
-                img{
-                    filter: invert(1);
-                }
             }
             p{
                 font-size: 2.5rem;
@@ -233,7 +228,7 @@ footer{
         }
         p{
             font-size: 2.5rem;
-            color:v.$color-oscuro;
+            color:v.$color-texto;
         }
     }
 }

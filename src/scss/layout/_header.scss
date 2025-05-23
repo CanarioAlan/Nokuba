@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 header{
-   background-color: v.$color-primario;
+   background-color: v.$color-base;
 
 }
 .header{
@@ -65,7 +65,7 @@ header{
          width: 100%;
          height: 100%;
          z-index: 2;
-         background-color: v.$color-primario;
+         background-color: transparent;
          @include m.tablet{
             position: relative;
          }
@@ -81,7 +81,7 @@ header{
             gap: 1rem;
             padding: 1rem;
             .link{
-               color: v.$color-gris;
+               color: v.$color-oscuro;
                font-size: 4rem;
                &:hover{
                   border-bottom: solid 1px v.$color-secundario;

@@ -15,7 +15,7 @@
         </section>
         <section class="logo-footer">
             <div class="contenedor-logo">
-                <a href="index.php"><img src="src/img/logo.svg" alt="Logo"></a>
+                <a href="index.php"><img src="src/img/logo.png" alt="Logo"></a>
                 <div class="iconos-logo">
                     <a href="https://www.instagram.com/nokuba.co/?hl=en" target="_blank"><img src="src/img/iconos/instagram.svg" alt="Instagram"></a>
                     <a href="https://www.facebook.com/profile.php?id=61575530507835" target="_blank"><img src="src/img/iconos/facebook.svg" alt="Facebook"></a>

@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="contenido-centrado header">
-            <a href="index.php"><img class="logo" src="src/img/logo.svg" alt="Logo"></a>
+            <a href="index.php"><img class="logo" src="src/img/logo.png" alt="Logo"></a>
             <div class="header-links-buscador">
                 <div class="buscador-input-contenedor">
                     <input type="text" class="buscador-input" placeholder="¿Qué estás buscando?">

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oregano:ital@0;1&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -313,6 +314,11 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 *,
 *::before,
 *::after {
@@ -332,8 +338,50 @@ h1, h2, h3, h4, h5, h6, a, p {
   padding: 0;
 }
 
+h1 {
+  font-family: "Oregano", cursive;
+  font-size: 3.6rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+}
+
 h3 {
-  font-size: 3rem;
+  font-size: 2.2rem;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+  h4 {
+    font-size: 2rem;
+  }
+}
+
+p {
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 1.8rem;
+  }
 }
 
 .contenido-centrado {
@@ -374,7 +422,7 @@ h3 {
 }
 
 header {
-  background-color: #F1EAEA;
+  background-color: #00FF7F;
 }
 
 .header {
@@ -419,7 +467,7 @@ header {
   display: block;
 }
 .header .header-links-buscador .buscador-input-contenedor .buscador-input {
-  border: solid 1px #BBBEA0;
+  border: solid 1px #FFA464;
   background-image: url("../../src/img/iconos/lupa.svg");
   background-repeat: no-repeat;
   width: 3.8rem;
@@ -443,7 +491,7 @@ header {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-color: #F1EAEA;
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   .header .header-links-buscador nav {
@@ -463,11 +511,11 @@ header {
   padding: 1rem;
 }
 .header .header-links-buscador nav .links .link {
-  color: #808080;
+  color: #000;
   font-size: 4rem;
 }
 .header .header-links-buscador nav .links .link:hover {
-  border-bottom: solid 1px #BBBEA0;
+  border-bottom: solid 1px #FFA464;
 }
 @media (min-width: 768px) {
   .header .header-links-buscador nav .links {
@@ -489,18 +537,18 @@ header {
     background-position: right 1rem center;
   }
   .header .header-links-buscador .buscador-input-contenedor .buscador-input::placeholder {
-    color: #BBBEA0;
+    color: #FFA464;
   }
   .header .header-links-buscador .buscador-input-contenedor .buscador-input:focus {
-    border: solid 1px #BBBEA0;
+    border: solid 1px #FFA464;
     background-image: none;
   }
 }
 .header .btn-menu {
   background-color: transparent;
   cursor: pointer;
-  border: solid 1px #BBBEA0;
-  color: #BBBEA0;
+  border: solid 1px #FFA464;
+  color: #FFA464;
   border-radius: 0.4rem;
 }
 .header .btn-menu img {
@@ -510,7 +558,7 @@ header {
 footer h3 {
   margin: 1rem 0 1.5rem 0;
   color: #fff;
-  background-color: #BBBEA0;
+  background-color: #FFA464;
 }
 @media (min-width: 768px) {
   footer h3 {
@@ -533,7 +581,7 @@ footer .redes {
 }
 footer .redes h2 {
   font-size: 2.4rem;
-  color: #BBBEA0;
+  color: #FFA464;
 }
 footer .redes .redes-iconos {
   display: flex;
@@ -558,7 +606,7 @@ footer .redes img {
 }
 footer .suscripcion {
   padding: 1rem 0;
-  background-color: #808080;
+  background-color: #00FF7F;
 }
 @media (min-width: 768px) {
   footer .suscripcion {
@@ -573,7 +621,7 @@ footer .suscripcion .form-suscripcion {
 }
 footer .suscripcion input {
   padding: 0.5rem;
-  border: solid 1px #BBBEA0;
+  border: solid 1px #FFA464;
   border-radius: 0.4rem 0rem 0rem 0.4rem;
   height: 100%;
   width: 20rem;
@@ -581,7 +629,7 @@ footer .suscripcion input {
 }
 footer .suscripcion input::placeholder {
   font-size: 1.6rem;
-  color: #BBBEA0;
+  color: #FFA464;
   font-weight: 900;
 }
 @media (min-width: 768px) {
@@ -597,7 +645,7 @@ footer .suscripcion button {
   padding: 0.5rem;
   border: none;
   border-radius: 0rem 0.4rem 0.4rem 0rem;
-  background-color: #BBBEA0;
+  background-color: #FFA464;
   color: #fff;
   height: 100%;
   font-weight: 900;
@@ -612,7 +660,7 @@ footer .logo-footer .contenedor-logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F1EAEA;
+  background-color: #00FF7F;
   padding: 0.5rem 1rem;
 }
 footer .logo-footer .contenedor-logo img {
@@ -723,12 +771,9 @@ footer .tiempo-entrega .icono {
 }
 footer .tiempo-entrega .icono img {
   width: 4rem;
-  background-color: #808080;
+  background-color: #00FF7F;
   border-radius: 50%;
   padding: 0.5rem;
-}
-footer .tiempo-entrega .icono:nth-child(5) img {
-  filter: invert(1);
 }
 footer .tiempo-entrega .icono p {
   font-size: 2.5rem;
@@ -742,7 +787,7 @@ footer .tiempo-entrega .iconos-decorativo img {
   width: 4rem;
 }
 footer .copyright {
-  background-color: #BBBEA0;
+  background-color: #FFA464;
   padding: 0.5rem;
 }
 @media (min-width: 768px) {
@@ -753,7 +798,7 @@ footer .copyright {
 }
 footer .copyright p {
   font-size: 2.5rem;
-  color: #000;
+  color: #fff;
 }
 
 main .banner img {
@@ -833,13 +878,13 @@ main .accesorios-index .accesorios-index-contenido {
 }
 .producto .informacion-general .form-etiqueta-perro .informacion-llavero input {
   padding: 0.5rem;
-  border: solid 1px #BBBEA0;
+  border: solid 1px #FFA464;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   width: 25rem;
 }
 .producto .informacion-general .form-etiqueta-perro .form-border {
-  border-left: solid 1rem #BBBEA0;
+  border-left: solid 1rem #FFA464;
   padding-left: 1rem;
 }
 .producto .informacion-general .form-etiqueta-perro .tamaño-llavero {
@@ -854,7 +899,7 @@ main .accesorios-index .accesorios-index-contenido {
 .producto .informacion-general .form-etiqueta-perro .tamaño-llavero button {
   padding: 0.5rem;
   background-color: transparent;
-  border: solid 1px #BBBEA0;
+  border: solid 1px #FFA464;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   width: 25rem;
@@ -862,7 +907,7 @@ main .accesorios-index .accesorios-index-contenido {
 }
 .producto .informacion-general .form-etiqueta-perro .boton-envio {
   padding: 1.5rem 0;
-  background-color: #BBBEA0;
+  background-color: #FFA464;
   border-radius: 0.4rem;
   border: none;
   color: #fff;
@@ -886,70 +931,31 @@ main .accesorios-index .accesorios-index-contenido {
 }
 
 .sobre {
-  padding: 1rem;
+  margin: 2rem auto;
 }
-.sobre h1 {
-  font-size: 2.6rem;
-  font-weight: 900;
-}
-.sobre .sobre-contenido .sobre-texto {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-@media (min-width: 768px) {
-  .sobre .sobre-contenido .sobre-texto {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .sobre .sobre-contenido .sobre-texto .sobre-titulos {
-    width: 370px;
-  }
-  .sobre .sobre-contenido .sobre-texto .sobre-titulos h2 {
-    font-size: 2.7rem;
-  }
-}
-.sobre .sobre-contenido .sobre-texto h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-.sobre .sobre-contenido .sobre-texto p {
+.sobre .sobre-contenido {
   text-align: start;
-  font-size: 1.6rem;
-  font-weight: 400;
+  padding: 1.5rem;
 }
-.sobre .sobre-contenido .sobre-texto .sobre-imagen {
-  width: 20rem;
-  height: 20rem;
-  margin: 0 auto;
-  background-color: #BBBEA0;
-  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-  background-image: url("../../../src/img/nokuba-img.jpg");
-  background-size: cover;
-  background-position: center;
-}
-@media (min-width: 768px) {
-  .sobre .sobre-contenido .sobre-texto .sobre-imagen {
-    width: 25rem;
-    height: 25rem;
-    margin: 0;
-  }
-}
-.sobre .sobre-contenido .sobre-texto-info h3 {
-  font-size: 1.8rem;
+.sobre .sobre-contenido span {
   font-weight: 600;
+  color: #FF6A00;
 }
-.sobre .sobre-contenido .sobre-texto-info p {
-  text-align: start;
-  font-size: 1.6rem;
-  font-weight: 400;
+.sobre .sobre-contenido h3 {
+  margin-bottom: 1rem;
+}
+.sobre .sobre-contenido h4 {
+  margin: 2rem 0 1rem 0;
+}
+.sobre .sobre-contenido .contenedor-sobre {
+  margin: 2rem 0;
+}
+.sobre .sobre-contenido ul {
+  list-style-type: circle;
+  font-size: 2rem;
 }
 @media (min-width: 768px) {
-  .sobre .sobre-contenido .sobre-texto-info h3 {
-    font-size: 2rem;
-  }
-  .sobre .sobre-contenido .sobre-texto-info p {
+  .sobre .sobre-contenido ul {
     font-size: 1.8rem;
   }
 }
@@ -966,7 +972,7 @@ main .accesorios-index .accesorios-index-contenido {
   width: 100%;
   max-width: 35rem;
   height: 45rem;
-  background-color: #BBBEA0;
+  background-color: #FFA464;
   background-image: url("../../src/img/perro.png");
   background-size: 27rem;
   background-repeat: no-repeat;
@@ -993,7 +999,7 @@ main .accesorios-index .accesorios-index-contenido {
   padding: 1rem;
 }
 .contenedor-contacto .contacto-formulario {
-  background-color: #BBBEA0;
+  background-color: #FFA464;
   padding: 1rem;
   width: 100%;
   max-width: 35rem;
@@ -1024,16 +1030,16 @@ main .accesorios-index .accesorios-index-contenido {
 }
 .contenedor-contacto .contacto-formulario form .form-grupo input {
   padding: 0.5rem;
-  border: solid 1px #BBBEA0;
+  border: solid 1px #FFA464;
   font-size: 1.7rem;
 }
 .contenedor-contacto .contacto-formulario form .form-grupo input:focus {
   outline: none;
-  border-color: #BBBEA0;
+  border-color: #FFA464;
 }
 .contenedor-contacto .contacto-formulario form .form-grupo textarea {
   padding: 0.3rem;
-  border: solid 1px #BBBEA0;
+  border: solid 1px #FFA464;
   font-size: 1.7rem;
 }
 .contenedor-contacto .contacto-formulario form .form-grupo textarea:focus {
@@ -1080,7 +1086,7 @@ main .accesorios-index .accesorios-index-contenido {
   position: absolute;
   right: 1rem;
   border: none;
-  background-color: #BBBEA0;
+  background-color: #FFA464;
   cursor: pointer;
 }
 .envios .cerrar-envios .cerrar-btn img {
@@ -1109,14 +1115,14 @@ main .accesorios-index .accesorios-index-contenido {
 }
 .envios table th {
   font-size: 2.2rem;
-  border: solid 1px #BBBEA0;
+  border: solid 1px #FFA464;
 }
 .envios table td {
   font-size: 2rem;
-  border: solid 1px #BBBEA0;
+  border: solid 1px #FFA464;
 }
 .envios table tfoot {
-  background-color: #BBBEA0;
+  background-color: #FFA464;
   color: #fff;
   font-size: 2rem;
   font-weight: 900;
